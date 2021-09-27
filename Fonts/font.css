@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Cabin-MediumItalic';
+  src: url('Cabin-MediumItalic.eot');
+  src: url('Cabin-MediumItalic.eot?#iefix') format('embedded-opentype'),
+       url('Cabin-MediumItalic.svg#Cabin-MediumItalic') format('svg'),
+       url('Cabin-MediumItalic.ttf') format('truetype'),
+       url('Cabin-MediumItalic.woff') format('woff'),
+       url('Cabin-MediumItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
