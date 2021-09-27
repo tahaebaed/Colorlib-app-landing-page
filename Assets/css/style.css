@@ -585,6 +585,10 @@ ul {
     width: 100%;
 }
 
+.plans__section {
+    
+}
+
 .plans__header {
     width: 50%;
     flex-flow: column nowrap;
