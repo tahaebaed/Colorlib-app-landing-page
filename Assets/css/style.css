@@ -44,6 +44,17 @@ body {
     font-family: 'Cabin', sans-serif;
 }
 
+
+.toggle {
+    font-size: 30px;
+    color: white;
+    float: left;
+    line-height: 45px;
+    margin-left: 5%;
+    cursor: pointer;
+    display: none;
+}
+
 .d-flex {
     display: flex;
     flex-wrap: wrap;
@@ -75,7 +86,7 @@ ul {
     background-repeat: no-repeat;
     height: 142vh;
     width: 100%;
-    background-position: bottom center;
+    background-position: center;
     background-size: cover;
 }
 
@@ -87,6 +98,7 @@ ul {
     position: fixed;
     width: 100%;
     z-index: 9999;
+    min-width: 625px;
 }
 
 .header__nav-bar {
@@ -113,6 +125,7 @@ ul {
     padding: .8rem;
     font-weight: 700;
     font-size: .8em;
+    min-width: 127px;
 }
 
 
@@ -120,6 +133,24 @@ ul {
     font-size: 3em;
     font-weight: 700;
     color: white;
+}
+
+
+@media only screen and (max-width: 940px) {
+    .header__nav-bar {
+        justify-content: flex-end;
+        margin: 0 20px;
+        width: 90%;
+    }
+
+    .toggle {
+        display: block;
+        font-size: 2em;
+    }
+
+    .navbar__list-container {
+        display: none;
+    }
 }
 
 .herobox__container {
@@ -166,6 +197,7 @@ ul {
     width: 50%;
     /* right: 6rem; */
     bottom: -9.5rem;
+    min-width: 480px;
 }
 
 .herobox__header form {
@@ -186,6 +218,7 @@ ul {
     background-color: rgba(255, 255, 255, 0.329);
     /* flex-grow: 1; */
     margin: 1rem .3rem 1rem 2rem;
+    min-width: 120px;
 }
 
 .herobox__header form ::placeholder {
@@ -203,8 +236,19 @@ ul {
     /* flex-grow: 1; */
     margin: .5rem 0.5rem .5rem 0;
     color: white;
+    min-width: 80px;
 }
 
+@media screen and (max-width: 940px) {
+    .herobox__header form input {
+        width: 25%;
+    }
+
+    .herobox__header form a {
+        font-size: .5em;
+        padding: 1rem 1.1rem;
+    }
+}
 
 /* hero section and navbar end
 /* specieal section */
@@ -227,6 +271,7 @@ ul {
     font-weight: 500;
     color: #512cb3;
     margin-bottom: 1rem;
+    min-width: 323px;
 }
 
 
@@ -242,7 +287,7 @@ ul {
 
 .special__items-container {
     width: 100%;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-content: flex-start;
     justify-content: space-between;
 }
@@ -258,6 +303,7 @@ ul {
     flex: 1 1 auto;
     /* height: 15rem; */
     width: 25%;
+    min-width: 250px;
 }
 
 .special__item i {
@@ -280,6 +326,8 @@ ul {
     font-weight: 500;
     margin: 0.5rem .3rem;
 }
+
+
 
 /* specieal section end */
 /* propostion section  */
@@ -352,7 +400,6 @@ ul {
     font-size: 0.7em;
 }
 
-
 /* specieal section end */
 /* Features section  */
 .features {
@@ -370,6 +417,7 @@ ul {
     font-weight: 500;
     color: #512cb3;
     margin-bottom: 1rem;
+    min-width: 360px;
 }
 
 
@@ -395,6 +443,7 @@ ul {
     padding: 1rem;
     margin: .5rem;
     color: #AFAEB3;
+    min-width: 216px;
 }
 
 .features__item-header {
@@ -402,6 +451,7 @@ ul {
     justify-content: flex-start;
     align-items: center;
     margin-bottom: .8rem;
+    min-width: 323px;
 }
 
 .features__item-header i {
@@ -414,6 +464,7 @@ ul {
     color: #512cb3;
     font-size: 1.3em;
     font-weight: 500;
+
 }
 
 /* Features section end */
@@ -500,6 +551,30 @@ ul {
     margin-bottom: 1rem;
 }
 
+@media screen and (max-width: 945px) {
+
+    .details__item {
+        font-size: .8em;
+    }
+
+    .details__item h5 {
+        font-size: 2em;
+        font-weight: 500;
+        margin-right: 1rem;
+    }
+
+    .details__item div {
+        font-size: 1em;
+        margin-bottom: .3rem;
+
+    }
+
+
+    .details__item div i {
+        font-size: 1.5em;
+        margin-bottom: 1rem;
+    }
+}
 
 
 /* video section end */
@@ -833,6 +908,31 @@ ul {
     color: #FC3B7E;
 }
 
+@media only screen and (max-width: 930px) {
+
+    .membership__header {
+        font-size: 1em;
+    }
+
+    .membership__header h4 {
+        font-size: 1.2em;
+        font-weight: 200;
+    }
+
+    .membership__header p {
+        font-size: .4em;
+        font-weight: 200;
+    }
+
+    .membership__btn {
+        background-color: #fff;
+        font-size: .7em;
+        padding: .5rem 1rem;
+        border-radius: 20px 20px 20px 0;
+        color: #FC3B7E;
+    }
+
+}
 
 /* team */
 
@@ -860,7 +960,7 @@ ul {
 
 
 .teams__items-wrapper {
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -868,6 +968,8 @@ ul {
 
 .teams__item {
     width: 22%;
+    /* margin: 20px; */
+    min-width: 165px;
 }
 
 
@@ -937,18 +1039,9 @@ ul {
 
 }
 
-.footer__info {
-    width: 50%;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-}
 
 .footer__inputs {
     width: 50%;
-    flex-direction: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
     padding: 0 0 0 2.1rem;
 
 }
@@ -972,11 +1065,13 @@ ul {
     padding: 1rem 5rem;
     border: none;
     border-radius: 25px 25px 25px 0;
+    min-width: 127px;
+    min-height: 50px;
 }
 
 
 .footer__info ul li {
-    margin-top: .8rem;
+    margin-top: 2rem;
 }
 
 
@@ -989,7 +1084,7 @@ ul {
     font-size: 2.3em;
     font-weight: 500;
     color: #512cb3;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
 
 }
 
@@ -1003,6 +1098,11 @@ ul {
 
 .footer__info {
     color: #a09fa4;
+    width: 50%;
+}
+
+.footer__info p {
+    margin-bottom: 4rem;
 }
 
 .footer__info span {
@@ -1018,4 +1118,26 @@ ul {
     bottom: 0;
     right: 1.8rem;
     opacity: .6;
+}
+
+
+@media only screen and (max-width: 730px) {
+    .footer__info-header {
+        font-size: 1.7em;
+    }
+
+    .footer__info {
+        font-size: .8em;
+    }
+
+
+    .footer__inputs button {
+        background-color: #FC3B7E;
+        color: white;
+        padding: 0.5rem 2rem;
+        border: none;
+        border-radius: 25px 25px 25px 0;
+        min-width: 127px;
+        min-height: 50px;
+    }
 }
