@@ -1139,7 +1139,7 @@ img {
   .herobox__header form {
     width: 100%;
   }
-  .herobox__header form ::placeholder {
+  .herobox__header form::placeholder {
     font-size: 0.8em;
   }
   .footer {
