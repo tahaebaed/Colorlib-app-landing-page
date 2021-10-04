@@ -16,6 +16,7 @@ html {
 
 body {
   font-family: 'Cabin', sans-serif;
+  width: 100%;
 }
 
 section {
@@ -116,6 +117,7 @@ img {
 }
 
 .herobox__container {
+  justify-content: space-between;
   position: relative;
   align-items: center;
   width: 100%;
@@ -150,13 +152,14 @@ img {
   margin: 0.7rem 0 5rem 2rem;
   z-index: 1;
 }
-
-.herobox__img img {
+.herobox__img {
+  width: 50%;
+}
+.herobox__img {
   position: absolute;
   width: 50%;
-  /* right: 6rem; */
+  right: 6rem;
   bottom: -9.5rem;
-  min-width: 480px;
 }
 
 .herobox__header form {
@@ -1114,9 +1117,6 @@ img {
     font-weight: 200;
   }
 
-  .propositions__img {
-    width: 80%;
-  }
 
   .membership__btn {
     font-size: 0.7em;
